@@ -11,9 +11,7 @@ class Star extends Component {
 
   // this function is what captures input from out text box to change the state. target is the value passed along from when we fill out the field on the UX side.
   handleChange(mass) {
-    this.setState({
-      [mass.target.star]: mass.target.value
-    });
+    this.setState({ star: mass.target.value });
   }
 
   tbdfunction(){
@@ -22,31 +20,37 @@ class Star extends Component {
     var starType;
     if( this.state.star <= 3){
       starType = 'Protostar';
-
+    } else if (this.state.star <= 6) {
+      starType = 'T Tauri';
+    } else if (this.state.star <= 10) {
+      starType = 'Red Dwarf';
+    } else if (this.state.star <= 11) {
+      starType = 'White Dwarf';
+    } else if (this.state.star <= 20) {
+      starType = 'Red Giant';
+    } else if (this.state.star <= 35) {
+      starType = 'Neutron Star';
+    } else if (this.state.star <= 100) {
+      starType = 'Super Giant';
+    } else {
+      starType = 'error: Mass input incorrect'
     }
+    return starType;
     
   }
-// leave note, function above should be in render to read the starType variable?
-  render(){
+// leave note, my button doesnt work. when i fill in the field input it changes immediately instead of wating for a button click.
+  render(){    
+    const newStar = this.tbdfunction();
     return (
       <div className='Star'>
         <h1> Check my Universe | {this.state.star}</h1>
-        {/* <button onClick={this.tbdfunction}> Calculate</button>
-        <h2> {this.state.star} </h2> */}
 
-        <form onSubmit={this}>
-          <label for="mass"></label>
+        <form onSubmit={this.tbdfunction}>
+          <label for="mass">Mass: </label>
           <input type="text" id="mass" value={this.state.star} onChange={this.handleChange}></input>
           <button>click me</button>
         </form >
-        <h1> "{ starType }"</h1>
-
-        {/* <form onSubmit={this.tbdfunction}>
-          <label for="mass">Mass: </label>
-          <input type="text" id="mass" name="mass"  onChange={this.handleChange}></input>
-          <input type="submit" value="Submit"></input>
-        </form> */}
-
+        <h1> {newStar}</h1>
 
       </div>
     )
