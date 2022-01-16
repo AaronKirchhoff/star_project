@@ -4,7 +4,7 @@ class Star extends Component {
   constructor(props){
     super(props);
     // state is how much mass the star is, we will set it at 0 for now, update state with an input field, and based on that, we call a function that will decide what star to display.
-    this.state = {star: 0};
+    this.state = {star: ''};
     this.handleChange = this.handleChange.bind(this);
     this.tbdfunction = this.tbdfunction.bind(this);    
   }
@@ -14,9 +14,8 @@ class Star extends Component {
     this.setState({ star: mass.target.value });
   }
 
-  tbdfunction(){
+  tbdfunction(evt){
     // and we dont want tpage t refresh automatically, so ...
-    // mass.preventDefault();
     var starType;
     if( this.state.star <= 3){
       starType = 'Protostar';
@@ -35,10 +34,10 @@ class Star extends Component {
     } else {
       starType = 'error: Mass input incorrect'
     }
-    return starType;
+    evt.preventDefault()
     
   }
-// leave note, my button doesnt work. when i fill in the field input it changes immediately instead of wating for a button click.
+// leave note, working with evt.preventDefault(), with it active my screen goes blank, maybe on the right track, when i hit the submit button it resets State back to 0, right now, filling out the input field updates state as i go, and i dont want that.
   render(){    
     const newStar = this.tbdfunction();
     return (
@@ -46,9 +45,10 @@ class Star extends Component {
         <h1> Check my Universe | {this.state.star}</h1>
 
         <form onSubmit={this.tbdfunction}>
-          <label for="mass">Mass: </label>
-          <input type="text" id="mass" value={this.state.star} onChange={this.handleChange}></input>
-          <button>click me</button>
+          <label>Mass: 
+            <input type="text" id="mass" value={this.state.star} onChange={this.handleChange}></input>
+          </label>
+          <input type="submit" value="Submit" />
         </form >
         <h1> {newStar}</h1>
 
