@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 
 class Star extends Component {
+  static defaultProps = {
+
+  }
+
   constructor(props){
     super(props);
     // state is how much mass the star is, we will set it at 0 for now, update state with an input field, and based on that, we call a function that will decide what star to display.
@@ -14,7 +18,14 @@ class Star extends Component {
     this.setState({ star: mass.target.value });
   }
 
-  tbdfunction(evt){
+  formSubmit(evt){
+    this.tbdfunction();
+    evt.preventDefault();
+
+  }
+
+
+  tbdfunction(){
     // and we dont want tpage t refresh automatically, so ...
     var starType;
     if( this.state.star <= 3){
@@ -34,8 +45,8 @@ class Star extends Component {
     } else {
       starType = 'error: Mass input incorrect'
     }
-    evt.preventDefault()
-    
+    return starType
+
   }
 // leave note, working with evt.preventDefault(), with it active my screen goes blank, maybe on the right track, when i hit the submit button it resets State back to 0, right now, filling out the input field updates state as i go, and i dont want that.
   render(){    
@@ -44,13 +55,13 @@ class Star extends Component {
       <div className='Star'>
         <h1> Check my Universe | {this.state.star}</h1>
 
-        <form onSubmit={this.tbdfunction}>
+        <form onSubmit={this.formSubmit}>
           <label>Mass: 
             <input type="text" id="mass" value={this.state.star} onChange={this.handleChange}></input>
           </label>
           <input type="submit" value="Submit" />
         </form >
-        <h1> {newStar}</h1>
+        <h1> {newStar} </h1>
 
       </div>
     )
