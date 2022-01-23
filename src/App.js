@@ -1,5 +1,7 @@
 import './App.css';
 import Star from './star';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
       <div className='square'> ☀</div>
       </header>
       <Star />
+      <button type="button" class="btn btn-primary">Hey here is bootstrap button</button>
       
       
 

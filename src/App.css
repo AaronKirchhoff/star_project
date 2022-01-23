@@ -1,4 +1,4 @@
-body{
+html, body{
   background-color: #282c34;
 }
 
@@ -45,13 +45,15 @@ body{
 .square {
   display: flex;
   margin: 3px;
+  margin-top: 20px;
   justify-content: center;
   text-align: center;
   align-items: center;
-  background-color: black;
+  background-color: rgb(39, 85, 211);
   color: yellow;
   width: 200px;
   height: 200px;
+  border-radius: 100em;
 }
 
 

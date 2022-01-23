@@ -76,14 +76,14 @@ class Star extends Component {
     const newStar = this.state.star;
     return (
       <div className='Star'>
-        <h1> Check my Universe | {this.state.star}</h1>
+        <h1 class="display-2"> Check my Universe | {this.state.star}</h1>
 
         <form onSubmit={this.formSubmit}>
-          <label>Mass: 
+          <label class="h2">Mass: 
             <input type="text" id="mass" value={this.state.star} onChange={this.handleChange}></input>
           </label>
           {/* <input type="submit" value="Submit" /> */}
-          <button>Submit here</button>
+          <button class="btn btn-success">Submit here</button>
         </form >
         <h1> {newStar} </h1>
 
