@@ -6,8 +6,9 @@ class Star extends Component {
     super(props);
     // state is how much mass the star is, we will set it at 0 for now, update state with an input field, and based on that, we call a function that will decide what star to display.
     this.state = {star: ''};
+    // currentState is saved at starType variable below
+    this.state = {currentStar: ''};
     this.handleChange = this.handleChange.bind(this);
-    this.tbdfunction = this.tbdfunction.bind(this);   
     this.formSubmit = this.formSubmit.bind(this); 
   }
 
@@ -38,57 +39,30 @@ class Star extends Component {
     } else {
       starType = 'error: Mass input incorrect'
     }
-    alert(`you typed: ${starType}`);
+    this.setState({currentStar: starType})
+    evt.preventDefault();
+    // alert(`you typed: ${starType}`);
     this.setState({star: ''})
     return starType
   }
   
-
-
-  tbdfunction(){
-    // and we dont want tpage t refresh automatically, so ...
-    var starType;
-    if( this.state.star === ''){
-      starType = '';
-    } else if (this.state.star <= 3) {
-      starType = 'Protostar';
-    } else if (this.state.star <= 6) {
-      starType = 'T Tauri';
-    } else if (this.state.star <= 10) {
-      starType = 'Red Dwarf';
-    } else if (this.state.star <= 11) {
-      starType = 'White Dwarf';
-    } else if (this.state.star <= 20) {
-      starType = 'Red Giant';
-    } else if (this.state.star <= 35) {
-      starType = 'Neutron Star';
-    } else if (this.state.star <= 100) {
-      starType = 'Super Giant';
-    } else {
-      starType = 'error: Mass input incorrect'
-    }
-    return starType
-
-  }
-
   render(){    
-    // leave note: no idea what to put here to bring in starType variable
-    const newStar = this.state.star;
     return (
       <div className='Star'>
-        <h1 class="display-2"> Check my Universe | {this.state.star}</h1>
+        <h1 class="display-2"> What's my Star? | {this.state.currentStar}</h1>
 
         <form onSubmit={this.formSubmit}>
           <label class="h2">Mass: 
             <input type="text" id="mass" value={this.state.star} onChange={this.handleChange}></input>
           </label>
-          {/* <input type="submit" value="Submit" /> */}
-          <button class="btn btn-success">Submit here</button>
+          <button class="btn btn-success">Calculate</button>
         </form >
-        <h1> {newStar} </h1>
 
       </div>
+      
     )
   }
 }
 export default Star;
+
+// solved my problem!!! i needed the starType to be its own state to save that information.
