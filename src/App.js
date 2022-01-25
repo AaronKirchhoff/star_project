@@ -19,6 +19,7 @@ function App() {
           <li>input mass and luminosity to calculate actual star class</li>
           <li>quis nostrud exercitation ullamco laboris</li>
           <li>nisi ut aliquip ex ea commodo consequat.</li>
+          <li>strikethrough to do list would be cool refer to hmwk</li>
         </ul>        
       </div>
       <div>

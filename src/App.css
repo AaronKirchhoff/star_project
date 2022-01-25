@@ -22,16 +22,20 @@ html, body{
     animation: App-logo-spin infinite 20s linear;
   }
 }
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
 
 .To-do {
   overflow: hidden;
   /* width: 500px;
   height: 40vmin; */
   /* display: flex; */
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   display: inline-block;
-  background-color: white;
+  background-color: rgb(228, 228, 228);
   color: black;
   border-radius: 5px;
   padding: 10px;
