@@ -1,5 +1,6 @@
 import './App.css';
 import Star from './star';
+import StarType from './StarType';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -20,8 +21,9 @@ function App() {
           <li>quis nostrud exercitation ullamco laboris</li>
           <li>nisi ut aliquip ex ea commodo consequat.</li>
           <li>strikethrough to do list would be cool refer to hmwk</li>
-        </ul>        
+        </ul> 
       </div>
+      <StarType />
       <div>
         <button type="button" class="btn btn-primary">Hey here is bootstrap button</button>
         <button type="button" class="btn btn-danger">delete star</button>
