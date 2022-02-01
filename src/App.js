@@ -1,8 +1,8 @@
 import './App.css';
 import Star from './star';
-import StarType from './StarType';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// const APOD_API = "https://api.nasa.gov/planetary/apod?api_key=6l3gpeSno0tShfNMamoyXhRLDU3pFCac6QE8fkuN"
 
 function App() {
   return (
@@ -23,7 +23,6 @@ function App() {
           <li>strikethrough to do list would be cool refer to hmwk</li>
         </ul> 
       </div>
-      <StarType />
       <div>
         <button type="button" class="btn btn-primary">Hey here is bootstrap button</button>
         <button type="button" class="btn btn-danger">delete star</button>

@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
+import StarType from './StarType';
+import theSun from "./the-sun.jpg";
 
+
+// star component is the container for StarType, this is where im going to do all the heavy lifting and run my methods. I will pass along some state info as props to StarType and call that.
 class Star extends Component {
 
   constructor(props){
@@ -8,6 +12,7 @@ class Star extends Component {
     this.state = {star: ''};
     // currentState is saved at starType variable below
     this.state = {currentStar: ''};
+    this.state = {defaultImageState: theSun};
     this.handleChange = this.handleChange.bind(this);
     this.formSubmit = this.formSubmit.bind(this); 
   }
@@ -57,12 +62,21 @@ class Star extends Component {
           </label>
           <button class="btn btn-success">Calculate</button>
         </form >
+        {/* passing a prop to StarType compenent. super simple. i even passed the currentStar state as a prop. can't figure out how to set an image as adeault prop in StarType... so for now, always put in the prop for starImage as the current state of defaultIMageState from here.*/}
+        <StarType starImage={this.state.defaultImageState} name={this.state.currentStar}/>
 
       </div>
       
     )
   }
 }
+
+// Star.defaultProps = {
+//   starImage: theSun,
+//   Name: "What;s my Star?",
+//   data: "???"
+// }
+
 export default Star;
 
 // solved my problem!!! i needed the starType to be its own state to save that information.

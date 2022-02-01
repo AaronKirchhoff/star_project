@@ -1,21 +1,36 @@
 import React, {Component} from 'react';
-import theSun from "./the-sun.jpg";
+// import theSun from "./the-sun.jpg";
+import './App.css';
+
+
 
 
 class StarType extends Component {
+  static defaultProps = {
+    starImage:  '',
+    name: "What's my Star?",
+    data: "Cosmic ipsum wavelength terminator celestial coordinates Deneb falling star umbra inferior planets outer planets Van Allen belt Doppler shift solar system pole star north star local group helium radiation Hubble's law red giant star comet gravitational lens vernal equinox inner planets"
+  }
   // constructor(props){
   //   super(props);
+
+    // this.state = {starPropTest: this.state.currentStar}
   // }
+
+  
+  
+
 
   render(){
     return (
       <div className='starType'>
-        <img src={theSun} alt="the-sun"></img>
-        <h2 class="display-3 text-success">Main Sequence, Yellow Star</h2>
-        <p>Billions upon billions! Globular star cluster tendrils of gossamer clouds Vangelis dream of the mind’s eye network of wormholes a very small stage in a vast cosmic arena worldlets take root and flourish stirred by starlight, Flatland concept of the number one. Dispassionate extraterrestrial observer of brilliant syntheses not a sunrise but a galaxyrise intelligent beings, rings of Uranus tingling of the spine shores of the cosmic ocean gathered by gravity.</p>
+        <img src={this.props.starImage} alt={"star-pictures"}></img>
+        <p class="display-3 text-success">{this.props.name}</p>
+        <p>{this.props.data}</p>
       </div>
     )
   }
 }
+
 
 export default StarType;
