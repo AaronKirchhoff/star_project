@@ -7,6 +7,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="App">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+  <div  id="navbarNav">
+    <ul class="nav ">
+      <li class="nav-item">
+        <a class="nav-link" href="#">APOD</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">H-R Classification</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Life-Cycle</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Who's In Space?</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
       <header className="App-header">
       <div className='square'> ⭐</div>
       <div className='square'> 🌟</div>
