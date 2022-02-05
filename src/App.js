@@ -37,7 +37,7 @@ function App() {
         <h4 class="display-4 text-info" >To Do list | Minimal Viable Product</h4>
         <ul>
           <li>space api, astronomy picture of the day</li>
-          <li>input mass and luminosity to calculate actual star class</li>
+          <li>input temperature and luminosity to calculate actual star class</li>
           <li>quis nostrud exercitation ullamco laboris</li>
           <li>nisi ut aliquip ex ea commodo consequat.</li>
           <li>strikethrough to do list would be cool refer to hmwk</li>

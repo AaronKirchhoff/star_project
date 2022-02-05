@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 // import theSun from "./the-sun.jpg";
+import milkyWay from "./milky-way.jpg"
+
 import './App.css';
 
 
@@ -7,7 +9,7 @@ import './App.css';
 
 class StarType extends Component {
   static defaultProps = {
-    starImage:  '',
+    starImage:  milkyWay,
     name: "What's my Star?",
     data: "Cosmic ipsum wavelength terminator celestial coordinates Deneb falling star umbra inferior planets outer planets Van Allen belt Doppler shift solar system pole star north star local group helium radiation Hubble's law red giant star comet gravitational lens vernal equinox inner planets"
   }
