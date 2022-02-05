@@ -9,7 +9,9 @@ class Star extends Component {
   constructor(props){
     super(props);
     // state is how much mass the star is, we will set it at 0 for now, update state with an input field, and based on that, we call a function that will decide what star to display.
-    this.state = {star: ''};
+    this.state = {temp: ''};
+    this.state = {lumin: ''};
+
     this.state = {currentStar: ''};
     this.state = {defaultImageState: ''};
     this.state = {starBio: "Cosmic ipsum wavelength terminator celestial coordinates Deneb falling star umbra inferior planets outer planets Van Allen belt Doppler shift solar system pole star north star local group helium radiation Hubble's law red giant star comet gravitational lens vernal equinox inner planets"};
@@ -18,9 +20,9 @@ class Star extends Component {
   }
 
   // this function is what captures input from out text box to change the state. target is the value passed along from when we fill out the field on the UX side.
-  handleChange(mass) {
-    // runs on every keystroke, it's called a controlled component because react is following along with every entry the user makes in real time. beacuse of the onChange() method below
-    this.setState({ star: mass.target.value });
+  handleChange(evt) {
+    // runs on every keystroke, it's called a controlled component because react is following along with every entry the user makes in real time. beacuse of the onChange() method below. and to take in multiple inputs, take the name of the label/ and change that state to be equal to the input in THAT spot/value
+    this.setState({ [evt.target.name]: evt.target.value });
   }
 
   formSubmit(evt){
@@ -53,18 +55,21 @@ class Star extends Component {
     this.setState({starBio: starInformation})
     evt.preventDefault();
     // alert(`you typed: ${starType}`);
-    this.setState({star: ''})
+    this.setState({temp: ''})
     return starType
   }
   
   render(){    
     return (
       <div className='Star'>
-        <h1 class="display-2"> What's my Star? | {this.state.currentStar}</h1>
+        <h1 class="display-2"> What's my Star? | {this.state.temp} {this.state.lumin}</h1>
 
         <form onSubmit={this.formSubmit}>
-          <label class="h2">Mass: 
-            <input type="text" id="mass" value={this.state.star} onChange={this.handleChange}></input>
+          <label class="h2">temperature: 
+            <input type="text" name="temp" id="temperature" value={this.state.temp} onChange={this.handleChange}></input>
+          </label>
+          <label class="h2">luminosity:
+            <input type="text" name="lumin" id="luminosity" value={this.state.lumin} onChange={this.handleChange}></input>
           </label>
           <button class="btn btn-success">Calculate</button>
         </form >
