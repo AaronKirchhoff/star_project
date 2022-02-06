@@ -26,36 +26,32 @@ class Star extends Component {
   }
 
   formSubmit(evt){
+    let luminState = this.state.lumin;
+    let tempState = this.state.temp;
+    
     var starType;
     var starPic;
     var starInformation;
-    if( this.state.star === ''){
-      starType = '';
-    } else if (this.state.star <= 3) {
-      starType = 'Protostar';
-      starPic = theSun;
-      starInformation = "A protostar is a very young star that is still gathering mass from its parent molecular cloud. The protostellar phase is the earliest one in the process of stellar evolution.[1] For a low-mass star (i.e. that of the Sun or lower), it lasts about 500,000 years.[2] The phase begins when a molecular cloud fragment first collapses under the force of self-gravity and an opaque, pressure supported core forms inside the collapsing fragment. It ends when the infalling gas is depleted, leaving a pre-main-sequence star, which contracts to later become a main-sequence star at the onset of hydrogen fusion producing helium.";
-    } else if (this.state.star <= 6) {
-      starType = 'T Tauri';
-    } else if (this.state.star <= 10) {
-      starType = 'Red Dwarf';
-    } else if (this.state.star <= 11) {
+    if( this.state.temp || this.state.lumin === ''){
+      starType = 'Error: need more info';
+      starPic = '';
+      starInformation = '';
+      // leave note: function not working, new date inputs wont show...
+      // tempState > 6000 && tempState < 30000 && luminState > .00001 && luminState < .000316
+    } else if (luminState > 6 && tempState > 6) {
       starType = 'White Dwarf';
-    } else if (this.state.star <= 20) {
-      starType = 'Red Giant';
-    } else if (this.state.star <= 35) {
-      starType = 'Neutron Star';
-    } else if (this.state.star <= 100) {
-      starType = 'Super Giant';
+      starPic = theSun;
+      starInformation = "White dwarf stuff is a very young star that is still gathering mass from its parent molecular cloud. The protostellar phase is the earliest one in the process of stellar evolution.[1] For a low-mass star (i.e. that of the Sun or lower), it lasts about 500,000 years.[2] The phase begins when a molecular cloud fragment first collapses under the force of self-gravity and an opaque, pressure supported core forms inside the collapsing fragment. It ends when the infalling gas is depleted, leaving a pre-main-sequence star, which contracts to later become a main-sequence star at the onset of hydrogen fusion producing helium.";
     } else {
-      starType = 'error: Mass input incorrect'
+      starType = 'Error: This star is unusual and falls outside of the H-R diagrams naming conventions, try altering your temperature and luminosity to get your star classification.'
     }
     this.setState({currentStar: starType})
     this.setState({defaultImageState: starPic})
     this.setState({starBio: starInformation})
     evt.preventDefault();
     // alert(`you typed: ${starType}`);
-    this.setState({temp: ''})
+    this.setState({temp: ''});
+    this.setState({lumin: ''})
     return starType
   }
   
