@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import StarType from './StarType';
-import theSun from "./the-sun.jpg";
+
+import whiteDwarf from "./white-dwarf.jpg";
+import superGiant from "./super-giant.jpg";
+import giantStar from "./giant-star.jpg";
 
 
 // star component is the container for StarType, this is where im going to do all the heavy lifting and run my methods. I will pass along some state info as props to StarType and call that.
@@ -26,24 +29,33 @@ class Star extends Component {
   }
 
   formSubmit(evt){
-    let luminState = this.state.lumin;
-    let tempState = this.state.temp;
+    var luminState = this.state.lumin;
+    var tempState = this.state.temp;
     
     var starType;
     var starPic;
     var starInformation;
-    if( this.state.temp || this.state.lumin === ''){
-      starType = 'Error: need more info';
-      starPic = '';
-      starInformation = '';
-      // leave note: function not working, new date inputs wont show...
-      // tempState > 6000 && tempState < 30000 && luminState > .00001 && luminState < .000316
-    } else if (luminState > 6 && tempState > 6) {
+    if ( tempState > 6000 && tempState < 30000 && luminState > .00001 && luminState < .000316) {
       starType = 'White Dwarf';
-      starPic = theSun;
-      starInformation = "White dwarf stuff is a very young star that is still gathering mass from its parent molecular cloud. The protostellar phase is the earliest one in the process of stellar evolution.[1] For a low-mass star (i.e. that of the Sun or lower), it lasts about 500,000 years.[2] The phase begins when a molecular cloud fragment first collapses under the force of self-gravity and an opaque, pressure supported core forms inside the collapsing fragment. It ends when the infalling gas is depleted, leaving a pre-main-sequence star, which contracts to later become a main-sequence star at the onset of hydrogen fusion producing helium.";
+      starPic = whiteDwarf;
+      starInformation = "A white dwarf, also called a degenerate dwarf, is a stellar core remnant composed mostly of electron-degenerate matter. A white dwarf is very dense: its mass is comparable to that of the Sun, while its volume is comparable to that of Earth. A white dwarf's faint luminosity comes from the emission of residual thermal energy; no fusion takes place in a white dwarf.";
+    } else if (tempState > 3000 && tempState < 12000 && luminState > 1000 && luminState < 1000000){
+      starType = 'Super Giant';
+      starPic = superGiant;
+      starInformation = "Supergiants are among the most massive and most luminous stars. Supergiant stars occupy the top region of the Hertzsprung–Russell diagram with absolute visual magnitudes between about −3 and −8. The temperature range of supergiant stars spans from about 3,400 K to over 20,000 K.";
+    } else if (tempState > 3000 && tempState < 6000 && luminState > 10 && luminState < 1000){
+      starType = 'Giant';
+      starPic = giantStar;
+      starInformation = "A giant star is a star with substantially larger radius and luminosity than a main-sequence (or dwarf) star of the same surface temperature.[1] They lie above the main sequence (luminosity class V in the Yerkes spectral classification) on the Hertzsprung–Russell diagram and correspond to luminosity classes II and III.";
+    // } else if (){
+      
+    // something wrong with error code below...
+    } else if (tempState === '' || luminState === ''){
+      starType = 'Error: need more info';
+      starInformation = '';
     } else {
-      starType = 'Error: This star is unusual and falls outside of the H-R diagrams naming conventions, try altering your temperature and luminosity to get your star classification.'
+      starType = "Error: This star is unusual and falls outside of the H-R diagram's naming conventions, try altering your temperature and luminosity to get your star classification.";
+      starInformation = '';
     }
     this.setState({currentStar: starType})
     this.setState({defaultImageState: starPic})
