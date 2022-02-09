@@ -1,5 +1,5 @@
-import './App.css';
-import Star from './star';
+import './components/App.css';
+import Star from './components/star';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // const APOD_API = "https://api.nasa.gov/planetary/apod?api_key=6l3gpeSno0tShfNMamoyXhRLDU3pFCac6QE8fkuN"
