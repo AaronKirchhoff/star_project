@@ -104,7 +104,7 @@ class Star extends Component {
   render(){    
     return (
       <div className='Star'>
-        <h1 class="display-2"> What's my Star? | {this.state.temp} {this.state.lumin}</h1>
+        <h1 class="display-2"> What's my Star?</h1>
 
         <form onSubmit={this.formSubmit}>
           <label class="h2">temperature: 

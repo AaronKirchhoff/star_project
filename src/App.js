@@ -1,5 +1,6 @@
 import './components/App.css';
 import Star from './components/star';
+import {BrowserRouter, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // const APOD_API = "https://api.nasa.gov/planetary/apod?api_key=6l3gpeSno0tShfNMamoyXhRLDU3pFCac6QE8fkuN"
@@ -8,30 +9,26 @@ function App() {
   return (
     <div className="App">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
-  <div  id="navbarNav">
-    <ul class="nav ">
-      <li class="nav-item">
-        <a class="nav-link" href="#">APOD</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">H-R Classification</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Life-Cycle</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Who's In Space?</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+        <div  id="navbarNav">
+          <ul class="nav ">
+            <li class="nav-item">
+              <a class="nav-link" href="#">APOD</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">H-R Classification</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Life-Cycle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Who's In Space?</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-      <header className="App-header">
-      <div className='square'> ⭐</div>
-      <div className='square'> 🌟</div>
-      <div className='square'> ☀</div>
-      </header>
+      
       <Star />
       <div className='To-do'>
         <h4 class="display-4 text-info" >To Do list | Minimal Viable Product</h4>
