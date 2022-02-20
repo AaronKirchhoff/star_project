@@ -13,20 +13,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // const APOD_API = "https://api.nasa.gov/planetary/apod?api_key=6l3gpeSno0tShfNMamoyXhRLDU3pFCac6QE8fkuN"
 
+
+// for the record, after being stuck on routing for a week, i pulled info, copied code from the react-router website that created this dependency, they had all the updated info i needed.
 export default function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/nasaphoto">NasaPhoto</Link>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+          <ul class="nav ">
+            <li class="nav-item">
+              <Link to="/nasaphoto">Nasa Photo</Link>
             </li>
-            <li>
+            <li class="nav-item">
               <Link to="/">Home</Link>
             </li>
-            <li>
-              <Link to="/startype">StarType</Link>
+            <li class="nav-item">
+              <Link to="/startype">Star Type</Link>
             </li>
           </ul>
         </nav>
