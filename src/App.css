@@ -129,10 +129,9 @@ img {
   }
 }
 
-
 .navBar {
-  /* text-align: center;
-  justify-content: center; */
+  text-align: center;
+  justify-content: center;
   margin-bottom: 80px;
   padding-bottom: 50px;
 }

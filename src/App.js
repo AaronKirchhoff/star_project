@@ -11,16 +11,14 @@ import Home from './components/Home';
 import NasaPhoto from './components/NasaPhoto';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// const APOD_API = "https://api.nasa.gov/planetary/apod?api_key=6l3gpeSno0tShfNMamoyXhRLDU3pFCac6QE8fkuN"
-
 
 // for the record, after being stuck on routing for a week, i pulled info, copied code from the react-router website that created this dependency, they had all the updated info i needed.
 export default function App() {
   return (
     <Router>
       <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
-          <ul class="nav ">
+        {/* <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+          <ul class="nav" className='navBar'>
             <li class="nav-item">
               <Link to="/nasaphoto">Nasa Photo</Link>
             </li>
@@ -31,7 +29,7 @@ export default function App() {
               <Link to="/startype">Star Type</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */} 
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}

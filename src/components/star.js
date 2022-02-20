@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import StarType from './StarType';
+import NavBar from './NavBar'
 
 import whiteDwarf from "./white-dwarf.jpg";
 import superGiant from "./super-giant.jpg";
@@ -104,6 +105,7 @@ class Star extends Component {
   render(){    
     return (
       <div className='Star'>
+        <NavBar />
         <h1 class="display-2"> What's my Star?</h1>
 
         <form onSubmit={this.formSubmit}>
