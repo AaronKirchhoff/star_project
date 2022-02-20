@@ -1,26 +1,50 @@
-// import './components/App.css';
-// import Star from './components/star';
+import './App.css';
+import Star from './components/star';
 import React from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 import Home from './components/Home';
 import NasaPhoto from './components/NasaPhoto';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // const APOD_API = "https://api.nasa.gov/planetary/apod?api_key=6l3gpeSno0tShfNMamoyXhRLDU3pFCac6QE8fkuN"
 
-function App() {
+export default function App() {
   return (
-      <BrowserRouter>
-        <div>
-          <Route component={Home} path="/" exact />
-          <Route component={NasaPhoto} path="/nasaphoto" />
-        </div>
-      </BrowserRouter>
-    
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/nasaphoto">NasaPhoto</Link>
+            </li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/startype">StarType</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Routes>
+          <Route path="/nasaphoto" element={<NasaPhoto />}>
+          </Route>
+          <Route path="/" element={<Home />}>
+          </Route>
+          <Route path="/startype" element={<Star />}>
+          </Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
-
-export default App;
 
 
 // {/* <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
