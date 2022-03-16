@@ -32,7 +32,7 @@ export default function App() {
         </nav> */} 
 
         {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+            renders the first one that matches the current URL. switch has since changed to Routes */}
         <Routes>
           <Route path="/nasaphoto" element={<NasaPhoto />}>
           </Route>
