@@ -1,5 +1,10 @@
-/* html, body{
-  background-color: #282c34;
+
+/* html {
+  background: "./camping_stars.jpg" no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 } */
 
 .h1-title {
@@ -81,12 +86,17 @@ img {
   padding: 30px;
   padding-bottom: 30px;
   margin: 30px;
-
-
-
 }
 
-
+.HomedivLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  border-style: solid;
+  border-color: aliceblue;
+}
 
 .App-header {
   /* min-height: 100vh; */
