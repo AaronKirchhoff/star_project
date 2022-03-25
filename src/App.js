@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home';
 import NasaPhoto from './components/NasaPhoto';
-import background from "./components/camping_wallpaper.jpg";
+// import background from "./components/camping_wallpaper.jpg";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -18,12 +18,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App() {
   return (
     <Router>
-      <div style={{ 
-        backgroundImage: `url(${background})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
-      }}>
+      <div >
         {/* <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
           <ul class="nav" className='navBar'>
             <li class="nav-item">
