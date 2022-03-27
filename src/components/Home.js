@@ -17,10 +17,14 @@ export default function Home(){
       backgroundRepeat: 'no-repeat',
 
     }}>
-      <div >
+      <div className='homeRow' >
         <div className='landingPageBox'>
-          <Link to="/nasaphoto">See into the stars!!   </Link>
-          <Link to="/startype">Star Type</Link>      
+          <div className="homelink1">
+            <Link className="link" to="/nasaphoto">NASA Astronomy Picture{'\n'} of the Day</Link> 
+          </div>
+          <div className='homelink2'>
+            <Link className="link" to="/startype">Star Classification</Link>  
+          </div>  
         </div>
       </div>
     </div>
