@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
+// no import for css file becuase its already the parent to all these files, since we imported in app.js
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
 
@@ -23,11 +24,11 @@ export default function NasaPhoto(){
   if (!photoData) return <div />;
 
   return (
-    <div>
+    <div className='nasaPhotoContainer'>
       <NavBar />
 
       {photoData.media_type === "image" ? (
-      <img src={photoData.url} alt={photoData.title}></img>
+      <img className="nasaPhotoDiv1" src={photoData.url} alt={photoData.title}></img>
       ) : (
         <iframe
           title="space-video"
@@ -39,10 +40,10 @@ export default function NasaPhoto(){
           className='photo'
         ></iframe>
       )}
-      <div>
-        <h1>{photoData.title}</h1>
-        <p>{photoData.date}</p>
-        <p>{photoData.explanation}</p>
+      <div className='nasaPhotoDiv2'>
+        <h1 className='nasaTitle'>{photoData.title}</h1>
+        <p className="nasaDate">{photoData.date}</p>
+        <p className='nasaExplanation'>{photoData.explanation}</p>
       </div>
     </div>
 

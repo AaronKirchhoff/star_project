@@ -6,7 +6,7 @@ export default function NavBar(){
   return (
     <div>
       <ul>
-        <Link to="/">Take me home</Link>
+        <Link className='home-link' to="/">Back to Home</Link>
       </ul>
     </div>
   )

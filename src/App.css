@@ -1,3 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+.nasaPhotoContainer {
+  font-family: 'Righteous', cursive;
+  color: #871D60 ;
+  line-height: 1.7;
+  font-size: 25px;
+  background-color: #0A1F3F;
+  min-height: 100vh;
+  /* background-image: url("https://unsplash.com/photos/W8KTS-mhFUE"); */
+}
+
+.nasaPhotoDiv1 {
+    width: 50%;
+    float: left;
+    padding: 50px;
+    background-color: #0A1F3F;
+    
+}
+
+
+
+.nasaPhotoDiv2 {
+    width: 50%;
+    float: left;
+    padding: 50px;
+    background-color: #0A1F3F;
+    /* height: auto; */
+    /* border: 2px solid red; */
+
+}
+
+.home-link {
+color: white;
+}
+
+.nasaTitle {
+  background-color: #261B66;
+  padding: 25px;
+  border-radius: 3px;
+  /* font-size: 40px; */
+}
+
+.nasaDate {
+  color: #501B6B;
+}
+.nasaExplanation {
+  color: #FFEDBC;
+}
 
 /* html {
   background: "./camping_stars.jpg" no-repeat center center fixed; 
@@ -48,11 +97,11 @@ label, button, input {
   margin: 5px
 }
 
-img {
-  height: 400px;
-  width: 400px;
+/* img {
+  height: 500px;
+  width: 500px;
   padding-bottom: 15px;
-}
+} */
 
 .starType {
   margin-left: auto;
