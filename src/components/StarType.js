@@ -21,7 +21,6 @@ class StarType extends Component {
 
   
   
-// leavenote: write function that takes in data and changes state of img src, data, and name of star...
 
   render(){
     return (

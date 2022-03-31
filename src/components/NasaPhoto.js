@@ -30,14 +30,14 @@ export default function NasaPhoto(){
       {photoData.media_type === "image" ? (
       <img className="nasaPhotoDiv1" src={photoData.url} alt={photoData.title}></img>
       ) : (
-        <iframe
+        <iframe 
           title="space-video"
           src={photoData.url}
           frameBorder="0"
           allow="autoplay"
           // allow="encrypted-media"
           allowFullScreen
-          className='photo'
+          className="nasaVideoDiv"
         ></iframe>
       )}
       <div className='nasaPhotoDiv2'>

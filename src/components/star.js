@@ -105,20 +105,26 @@ class Star extends Component {
   render(){    
     return (
       <div className='Star'>
-        <NavBar />
-        <h1 class="display-2"> What's my Star?</h1>
-
-        <form onSubmit={this.formSubmit}>
-          <label class="h2">temperature: 
-            <input type="text" name="temp" id="temperature" value={this.state.temp} onChange={this.handleChange}></input>
-          </label>
-          <label class="h2">luminosity:
-            <input type="text" name="lumin" id="luminosity" value={this.state.lumin} onChange={this.handleChange}></input>
-          </label>
-          <button class="btn btn-success">Calculate</button>
-        </form >
+        <div className='StarPageHead'>
+          <NavBar className="home-link" />
+          <h1 className="StarHeader"> What's my Star?</h1>
+        </div>
+        <div className='StarInputs'>
+          <p className='nasaExplanation'>Here you can Input your star's Temp and luminosity to get your star-type. If your two data points fall outside of the Hertzsprung–Russell diagram, try altering your inputs.</p>
+          <form onSubmit={this.formSubmit}>
+            <label class="h2">temperature: 
+              <input className="formInputBox" type="text" name="temp" id="temperature" value={this.state.temp} onChange={this.handleChange}></input>
+            </label>
+            <label class="h2">luminosity:
+              <input className="formInputBox" type="text" name="lumin" id="luminosity" value={this.state.lumin} onChange={this.handleChange}></input>
+            </label>
+            <button class="btn btn-success">Calculate</button>
+          </form >
+          <p>luminosity range | .00001 - 1,000,000 times the brigtness of the Sun.</p>
+          <p>Temperature range | 3,000 - 30,000 Kelvin.</p>
+        </div>
         {/* passing a prop to StarType compenent. super simple. i even passed the currentStar state as a prop. can't figure out how to set an image as adeault prop in StarType... so for now, always put in the prop for starImage as the current state of defaultIMageState from here.*/}
-        <StarType starImage={this.state.defaultImageState} name={this.state.currentStar} data={this.state.starBio}/>
+        <StarType className="starTypeComponent" starImage={this.state.defaultImageState} name={this.state.currentStar} data={this.state.starBio}/>
 
       </div>
       
