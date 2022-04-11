@@ -89,7 +89,7 @@ class Star extends Component {
       starType = 'Error: need more info';
       starInformation = '';
     } else {
-      starType = "Error: This star is unusual and falls outside of the H-R diagram's naming conventions, try altering your temperature and luminosity to get your star classification.";
+      starType = "Error: This star is unusual and falls outside of the H-R diagram's naming conventions, try altering your temperature and luminosity.";
       starInformation = '';
     }
     this.setState({currentStar: starType})
@@ -107,7 +107,7 @@ class Star extends Component {
       <div className='Star'>
         <div className='StarPageHead'>
           <NavBar className="home-link" />
-          <h1 className="StarHeader"> What's my Star?</h1>
+          <h1 className="StarHeader"> Star Class</h1>
         </div>
         <div className='StarInputs'>
           <p className='nasaExplanation'>Here you can Input your star's Temp and luminosity to get your star-type. If your two data points fall outside of the Hertzsprung–Russell diagram, try altering your inputs.</p>

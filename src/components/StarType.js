@@ -25,9 +25,13 @@ class StarType extends Component {
   render(){
     return (
       <div className='starType'>
-        <img src={this.props.starImage} alt={"star-pictures"}></img>
-        <p class="display-3 text-success">{this.props.name}</p>
-        <p>{this.props.data}</p>
+        <div className='starTypeData'>
+          <p class="display-3 text-success">{this.props.name}</p>
+          <p>{this.props.data}</p>
+        </div>
+        <div className="starTypePic">
+          <img src={this.props.starImage} alt={"star-pictures"} ></img>
+        </div>
       </div>
     )
   }

@@ -113,7 +113,7 @@ label, button, input {
   padding-bottom: 15px;
 } */
 
-.starType {
+/* .starType { */
   /* margin-left: auto;
   margin-right: auto;
   display: block;
@@ -125,14 +125,31 @@ label, button, input {
   padding: 30px;
   padding-bottom: 30px;
   margin-bottom: 30px; */
-
-  width: 50%;
+/* 
+  width: 33%;
   float: left;
   padding: 50px;
-  background-color: #0A1F3F;
+  background-color: #0A1F3F; */
   /* border-style: solid;
   border-color: #FFEDBC;
   border-width: 2px; */
+
+/* } */
+
+.starTypePic img {
+  width: 33%;
+  float: left;
+  padding: 30px;
+  background-color: #0A1F3F;
+
+}
+
+.starTypeData {
+  width: 33%;
+  float: left;
+  padding: 30px;
+  background-color: #0A1F3F;
+  
 
 }
 
@@ -158,9 +175,9 @@ display: inline-block;
 }
 
 .StarInputs {
-  width: 50%;
+  width: 33%;
   float: left;
-  padding: 50px;
+  padding: 30px;
   background-color: #0A1F3F;
 }
 
@@ -170,12 +187,12 @@ display: inline-block;
   align-items: center;
 }
 
-/* .starTypeComponent {
-  width: 50%;
+.starTypeComponent {
+  width: 33%;
   float: left;
   padding: 50px;
   background-color: #0A1F3F;
-} */
+}
 
 .To-do {
   overflow: hidden;
