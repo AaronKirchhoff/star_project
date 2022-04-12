@@ -1,4 +1,4 @@
-import "../pictures/SpaceGalleryPhotos"
+import "../pictures/SpaceGalleryPhotos/Galaxies"
 
 export default [
   {
@@ -26,9 +26,8 @@ export default [
       {name: "Galaxy18", pic:"oldest-galaxy-in-the-Universe.jpg"},
       {name: "Galaxy19", pic:"potw1922a-1280x720.jpg"},
     ]
+  },
 
-
-  }
 
 
 
