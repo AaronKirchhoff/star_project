@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 // really, 2 dots means go up a folder to look for import, like terminal commands... hmm.
 
-import background from "./camping_wallpaper.jpg";
+import background from "../pictures/camping_wallpaper.jpg";
 
 
 

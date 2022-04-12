@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 // import theSun from "./the-sun.jpg";
-import milkyWay from "./milky-way.jpg"
+import milkyWay from "../pictures/milky-way.jpg"
 
 // import './App.css';
 

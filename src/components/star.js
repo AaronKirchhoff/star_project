@@ -2,16 +2,16 @@ import React, {Component} from 'react';
 import StarType from './StarType';
 import NavBar from './NavBar'
 
-import whiteDwarf from "./white-dwarf.jpg";
-import superGiant from "./super-giant.jpg";
-import giantStar from "./giant-star.png";
-import classOStar from "./class-O-star.jpg";
-import classBStar from "./class-B-star.png";
-import classAStar from "./class-A-star.jpeg";
-import classFStar from "./class-F-star.jpg";
-import theSun from "./the-sun.jpg";
-import classKStar from "./class-K-star.jpg";
-import classMStar from "./class-M-star.png";
+import whiteDwarf from "../pictures/white-dwarf.jpg";
+import superGiant from "../pictures/super-giant.jpg";
+import giantStar from "../pictures/giant-star.png";
+import classOStar from "../pictures/class-O-star.jpg";
+import classBStar from "../pictures/class-B-star.png";
+import classAStar from "../pictures/class-A-star.jpeg";
+import classFStar from "../pictures/class-F-star.jpg";
+import theSun from "../pictures/the-sun.jpg";
+import classKStar from "../pictures/class-K-star.jpg";
+import classMStar from "../pictures/class-M-star.png";
 
 
 
