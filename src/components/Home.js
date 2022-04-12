@@ -24,7 +24,10 @@ export default function Home(){
           </div>
           <div className='homelink2'>
             <Link className="link" to="/startype">Star Classification</Link>  
-          </div>  
+          </div>
+          <div className='homelink3'>
+            <Link className="link" to="/gallerypage">Space Gallery</Link>  
+          </div> 
         </div>
       </div>
     </div>

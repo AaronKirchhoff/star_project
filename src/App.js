@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home';
 import NasaPhoto from './components/NasaPhoto';
+import GalleryPage from './components/GalleryPage';
 // import background from "./components/camping_wallpaper.jpg";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -41,6 +42,8 @@ export default function App() {
           <Route path="/" element={<Home />}>
           </Route>
           <Route path="/startype" element={<Star />}>
+          </Route>
+          <Route path="/gallerypage" element={<GalleryPage />}>
           </Route>
         </Routes>
       </div>
