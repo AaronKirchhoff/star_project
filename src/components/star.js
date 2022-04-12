@@ -26,7 +26,7 @@ class Star extends Component {
 
     this.state = {currentStar: ''};
     this.state = {defaultImageState: ''};
-    this.state = {starBio: "Cosmic ipsum wavelength terminator celestial coordinates Deneb falling star umbra inferior planets outer planets Van Allen belt Doppler shift solar system pole star north star local group helium radiation Hubble's law red giant star comet gravitational lens vernal equinox inner planets"};
+    this.state = {starBio: ""};
     this.handleChange = this.handleChange.bind(this);
     this.formSubmit = this.formSubmit.bind(this); 
   }
@@ -84,7 +84,7 @@ class Star extends Component {
       starType = 'Class M Star';
       starPic = classMStar;
       starInformation = "Class M stars are by far the most common. About 76% of the main-sequence stars in the solar neighborhood are class M stars.[e][f][8] However, class M main-sequence stars (red dwarfs) have such low luminosities that none are bright enough to be seen with the unaided eye, unless under exceptional conditions.";
-    // something wrong with error code below...
+      
     } else if (tempState === '' || luminState === ''){
       starType = 'Error: need more info';
       starInformation = '';
