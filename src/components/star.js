@@ -20,7 +20,7 @@ class Star extends Component {
 
   constructor(props){
     super(props);
-    // state is how much mass the star is, we will set it at 0 for now, update state with an input field, and based on that, we call a function that will decide what star to display.
+    
     this.state = {temp: ''};
     this.state = {lumin: ''};
 
