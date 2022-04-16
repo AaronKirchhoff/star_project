@@ -12,6 +12,7 @@ class GalleryPage extends Component {
         <h1>hello world</h1>
         <NavBar />
         <Gallery {...SeedGallery[0]}/>
+
       </div>
     )
   }
