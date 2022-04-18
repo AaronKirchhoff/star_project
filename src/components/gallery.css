@@ -1,7 +1,11 @@
 .gallery {
   height: 100vh;
+  position: relative;
+  z-index: 0;
 }
 
 .photo-boxes {
   height: 90%;
+  position: relative;
+  z-index: 0;
 }

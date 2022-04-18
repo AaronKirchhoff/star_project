@@ -7,6 +7,8 @@ import "./gallery.css"
 
 
 class Gallery extends Component {
+
+
   render() {
     // this function calls all the photos in our object.
     const photoBoxes = this.props.photos.map(mypic => (
@@ -19,6 +21,7 @@ class Gallery extends Component {
         <div className='photo-boxes'>
           {/* bunch of boxes go here */}
           {photoBoxes}
+          {/* somehow call the popup from here... */}
 
         </div>
         {/* footer eventually */}

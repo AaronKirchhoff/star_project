@@ -1,4 +1,4 @@
-// this file will contain all the images for my space gallery, I assign variable names to them, then import in seed gallery where im building my objects. I seperate my pictures this way to organize my app.
+// no need to import these, they are in my public folder!
 
 
 
