@@ -5,7 +5,7 @@
   margin: 0 auto;
   position: relative;
   cursor: pointer;
-  z-index: 0;
+  /* z-index: -5; */
 
   /* border-style: solid;
   border-color: red */

@@ -8,13 +8,11 @@ class PhotoBox extends Component {
     super(props);
   
     this.state = {isOpen: false};
-    // this.state = {currentNameofBox: undefined};
 
     this.togglePopup = this.togglePopup.bind(this);
     this.handleChange = this.handleChange.bind(this);
 
   }
-  // const [isOpen, setIsOpen] = useState(false);
 
   handleChange(evt){
     this.setState({ currentNameofBox: evt.target.value });
@@ -26,18 +24,10 @@ class PhotoBox extends Component {
       isOpen: !prevState.isOpen,
     }));
     this.setState({ currentNameofBox: this.props.name})
-
-    // this.handleChange();
-    // this.setState({isOpen: !isOpen});
-    // setIsOpen(!isOpen);
-  // }
-  // togglePopup(evt){
-  //   this.setState({isOpen: true})
   }
 
   render() {
     return (
-      // <div style={{backgroundImage: `url(${this.props.background})`,}} className='PhotoBox'>
         <div className='PhotoBox' onClick={this.state.isOpen === true ? undefined : this.togglePopup} style={{ 
           backgroundImage: `url(${this.props.background})`,
           backgroundPosition: 'center',
@@ -47,7 +37,7 @@ class PhotoBox extends Component {
         }}>
           
         <span>{this.props.name}</span>
-        {this.state.isOpen === true && <Popup
+        {this.state.isOpen === true && <Popup 
         content={<>
             <img src={this.props.background} alt='space'></img>
             <b>photo name:{this.props.name}</b>
@@ -56,14 +46,10 @@ class PhotoBox extends Component {
             
           </>}
           handleClose={this.togglePopup}
-        />}
+        />} 
       </div>
     )
   }
 }
 export default PhotoBox;
 
-// 1. i can have multiple popupboxes open at once
-// 2. the popup will render, but every photobox component after it will display over the popup component.
-// for every photobox component there is a different isOPen state, i need a parent state that contrills all others.
-// conditional statement is working sort of, photocbox compnents below it are off, but still can click components above the popupbox....
