@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PhotoBox from './photoBox';
 // import IMAGES from "./images";
 import "./gallery.css"
+import NavBar from './NavBar';
 
 
 
@@ -22,10 +23,9 @@ class Gallery extends Component {
 
     return (
       <div className='gallery'>
-        <h1>{this.props.galleryName}</h1>
-        <h2>{this.props.id}</h2>
-        <h2>{this.props.emoji}</h2>
-        
+        <NavBar className='home-link'/>
+
+        <h1 className='galleryHeader'>{this.props.galleryName}</h1>       
 
         <div className='photo-boxes'  >
           {/* bunch of boxes go here */}

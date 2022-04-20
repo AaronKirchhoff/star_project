@@ -2,10 +2,41 @@
   height: 100vh;
   position: relative;
   z-index: 0;
+
+  font-family: 'Righteous', cursive;
+  color: #871D60 ;
+  line-height: 1.7;
+  font-size: 25px;
+  background-color: #0A1F3F;
+  /* min-height: 100vh; */
 }
 
 .photo-boxes {
   height: 90%;
   position: relative;
   z-index: 0;
+}
+
+.home-link {
+  color: white;
+  display: inline-block;
+  }
+
+.galleryHeader {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.photo-box-title {
+  color: #FFEDBC;
+  justify-content: center;
+  align-items: center;
+/* display: inline-block;  
+left: 0;
+bottom: 0;
+position: absolute; */
+/* margin: -4px; */
 }

@@ -40,8 +40,6 @@
 .home-link {
 color: white;
 display: inline-block;
-/* position: absolute; */
-
 }
 
 .nasaTitle {
@@ -227,6 +225,11 @@ display: inline-block;
 }
 
 .homelink2 {
+  padding-top: 20px;
+
+}
+
+.homelink3 {
   padding-top: 20px;
 
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import "./photoBox.css"
 import Popup from './popup.js';
+import './gallery.css'
 
 // finally fixed this bug of setting an image for background not just a color. if you want an image as background you have to use the backgroundImage property, i was just using background.
 class PhotoBox extends Component {
@@ -36,7 +37,7 @@ class PhotoBox extends Component {
           
         }}>
           
-        <span>{this.props.name}</span>
+        <span className='photo-box-title'>{this.props.name}</span>
         {this.state.isOpen === true && <Popup 
         content={<>
             <img src={this.props.background} alt='space'></img>
