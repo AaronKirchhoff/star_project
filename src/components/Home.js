@@ -20,7 +20,7 @@ export default function Home(){
       <div className='homeRow' >
         <div className='landingPageBox'>
           <div className="homelink1">
-            <Link className="link" to="/nasaphoto">NASA Astronomy Picture{'\n'} of the Day</Link> 
+            <Link className="link" to="/nasaphoto">NASA Astronomy Picture of the Day</Link> 
           </div>
           <div className='homelink2'>
             <Link className="link" to="/startype">Star Classification</Link>  

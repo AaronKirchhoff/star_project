@@ -36,18 +36,18 @@ class PhotoBox extends Component {
           backgroundRepeat: 'no-repeat',
           
         }}>
-          
-        <span className='photo-box-title'>{this.props.name}</span>
-        {this.state.isOpen === true && <Popup 
-        content={<>
-            <img src={this.props.background} alt='space'></img>
-            <b>photo name:{this.props.name}</b>
-            <p>picture data goes here</p>
-            <button>Test button</button>
-            
-          </>}
-          handleClose={this.togglePopup}
-        />} 
+        <div className='popupStyle'>
+          <span className='photo-box-title'>{this.props.name}</span>
+          {this.state.isOpen === true && <Popup 
+          content={<>
+              <img src={this.props.background} alt='space'></img>
+              <b>photo name | {this.props.name}</b>
+              <p>picture data goes here, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ligula felis, gravida ut risus nec, dapibus cursus lectus. Quisque eu porttitor velit. Aenean dapibus justo ut libero facilisis mattis. Sed convallis libero et massa vehicula convallis. Aenean eu elementum velit. Vestibulum ullamcorper nibh at orci interdum porta. Praesent consectetur, justo a luctus eleifend, ipsum nisi finibus nibh, eu auctor orci ex accumsan dui. Cras vulputate porttitor vestibulum. </p>
+              
+            </>}
+            handleClose={this.togglePopup}
+          />} 
+        </div>
       </div>
     )
   }
