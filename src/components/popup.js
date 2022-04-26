@@ -8,11 +8,13 @@ class Popup extends Component {
   render(){
   return (
     <div className="popup-box-container">
-      <div className="popup-box">
-        <span className="close-icon" onClick={this.props.handleClose}>x</span>
-        {this.props.content}
-        
-        
+      <div className="popup-box" onClick={this.props.handleClose}>
+        <span className='pictureGradient'>{this.props.picture}</span>
+        {this.props.handleClose}      
+        <div className='popupDataStyling'>
+          <span className='galleryNameColor'>{this.props.galleryname}</span>
+          {this.props.photoInfo}
+        </div>        
       </div>
     </div>
   );

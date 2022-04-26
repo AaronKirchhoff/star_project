@@ -29,8 +29,10 @@ class PhotoBox extends Component {
 
   render() {
     return (
-        <div className='PhotoBox' onClick={this.state.isOpen === true ? undefined : this.togglePopup} style={{ 
+        <div className='PhotoBox' onClick={this.state.isOpen === true ? undefined : this.togglePopup} style={{
+      
           backgroundImage: `url(${this.props.background})`,
+          
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -39,13 +41,10 @@ class PhotoBox extends Component {
         <div className='popupStyle'>
           <span className='photo-box-title'>{this.props.name}</span>
           {this.state.isOpen === true && <Popup 
-          content={<>
-              <img src={this.props.background} alt='space'></img>
-              <b>photo name | {this.props.name}</b>
-              <p>picture data goes here, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ligula felis, gravida ut risus nec, dapibus cursus lectus. Quisque eu porttitor velit. Aenean dapibus justo ut libero facilisis mattis. Sed convallis libero et massa vehicula convallis. Aenean eu elementum velit. Vestibulum ullamcorper nibh at orci interdum porta. Praesent consectetur, justo a luctus eleifend, ipsum nisi finibus nibh, eu auctor orci ex accumsan dui. Cras vulputate porttitor vestibulum. </p>
-              
-            </>}
-            handleClose={this.togglePopup}
+          picture={<img src={this.props.background} alt='space'></img>}
+          galleryname={<h4>Photo Name | {this.props.name}</h4>}
+          photoInfo={ <p>picture data goes here, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ligula felis, gravida ut risus nec, dapibus cursus lectus. Quisque eu porttitor velit. Aenean dapibus justo ut libero facilisis mattis. Sed convallis libero et massa vehicula convallis. Aenean eu elementum velit. Vestibulum ullamcorper nibh at orci interdum porta. Praesent consectetur, justo a luctus eleifend, ipsum nisi finibus nibh, eu auctor orci ex accumsan dui. Cras vulputate porttitor vestibulum. </p>}
+          handleClose={this.togglePopup}
           />} 
         </div>
       </div>
