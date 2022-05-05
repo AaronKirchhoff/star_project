@@ -10,6 +10,7 @@ import {
 import Home from './components/Home';
 import NasaPhoto from './components/NasaPhoto';
 import GalleryPage from './components/GalleryPage';
+import LandingPage from './components/LandingPage';
 // import background from "./components/camping_wallpaper.jpg";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -39,11 +40,14 @@ export default function App() {
         <Routes>
           <Route path="/nasaphoto" element={<NasaPhoto />}>
           </Route>
+          {/* make a new landing page called landingPage, as smithsonian mock up, replace / below with that */}
           <Route path="/" element={<Home />}>
           </Route>
           <Route path="/startype" element={<Star />}>
           </Route>
           <Route path="/gallerypage" element={<GalleryPage />}>
+          </Route>
+          <Route path="/landingpage" element={<LandingPage />}>
           </Route>
         </Routes>
       </div>

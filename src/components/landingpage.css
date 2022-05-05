@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Space+Mono:ital@1&display=swap");
+
+
+body {
+  background-color: #705446;
+}
+
+.logo{
+  width: 300px;
+  height: 300px;
+  
+}
+
+.logo-div {
+  background-color: white;
+  width: 400px;
+  float: left;
+}
+
+
+.museumHeader {
+  width: 100%;
+  background-color: #3c3431;
+  color: whitesmoke;
+  font-family: 'Space Mono', monospace;
+  float: left;
+}

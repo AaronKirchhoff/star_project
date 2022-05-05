@@ -8,7 +8,7 @@ class GalleryPage extends Component {
   render() {
     return (
       <div>
-        <Gallery {...SeedGallery[1]}/>
+        <Gallery {...SeedGallery[0]}/>
 
       </div>
     )
